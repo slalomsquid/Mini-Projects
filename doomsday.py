@@ -12,13 +12,15 @@ day_code = [
     "Friday",
     "Saturday",
 ]
+"""List of days starting from sunday (0), used to convert the sum number into a word"""
 
 century_pattern = [2,0,5,3]
+"""Century starting doomsday pattern, always Tuesdat, Sunday, Friday or """
 
 doomsdays = [
     0, # Blank because lists start at 0
-    3, # Jan
-    28, # Feb
+    3, # Jan # 4th on a leap year
+    28, # Feb # 29th on leap
     14, # March
     4, # April
     9, # May
@@ -30,6 +32,7 @@ doomsdays = [
     7, # Nov
     12 # Dec
 ]
+"""Doomsdays are always the same within a year, once it has been calculated, it can be used to find any given days"""
 
 offset = 0
 # Get century number
