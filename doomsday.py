@@ -40,8 +40,8 @@ century = int(year[:2])
 print(f"Century: {century}")
 # year_century_code = int(century_doomsday.get(century, 0))
 # Follow pattern from year 2000, (2,0,5,3)
-year_century_code = century_pattern[(century-20)%4]
-print(f"Year code: {year_century_code}")
+year_century_code = century_pattern[(century)%4]
+print(f"Century code: {year_century_code}")
 # Get years into century (last 2 numbers)
 years_in_century = int(year[2:])
 print(f"Year: {years_in_century}")
@@ -71,5 +71,10 @@ print(f"Day: {day}")
 days_from = day - (month_doomsday + offset)
 print(f"Days from: {days_from}")
 # Add year doomsday offset and find remainder (simplifys to range of 0-6)
+day_of_week = days_from + doomsday
+print(f"Day: {day_of_week}")
+# Simplify
+day_of_week = day_of_week % 7
+print(f"Day: {day_of_week}")
 day_of_week = (days_from + doomsday) % 7
 print(day_code[day_of_week])
